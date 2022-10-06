@@ -14,7 +14,7 @@ function getTicket(e){
     if(ticket) {
         alert(`Grap your ticket: ${ticket[0]} ✈️ ${ticket[1]}`)
     } else {
-        alert(`Your trip is over =()`)
+        alert(`Your trip is over 😔`)
     }
 
 }
