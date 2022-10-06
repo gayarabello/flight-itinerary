@@ -24,7 +24,6 @@ function getItinerary(tickets){
     const routesMap = new Map();
     const originalMap = new Map();
     
-
     for(const [origin, destiny] of tickets){
         originalMap.set(origin, destiny)
     }
@@ -50,3 +49,4 @@ function getItinerary(tickets){
     return result;
 }
 
+const routes = getItinerary(onewayTickets);
