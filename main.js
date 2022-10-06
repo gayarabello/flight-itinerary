@@ -20,3 +20,33 @@ const onewayTickets = [
     ['GER', 'SWE'],
 ]
  */
+function getItinerary(tickets){
+    const routesMap = new Map();
+    const originalMap = new Map();
+    
+
+    for(const [origin, destiny] of tickets){
+        originalMap.set(origin, destiny)
+    }
+    for(const [origin, destiny] of tickets){
+        routesMap.set(destiny, origin)
+    }
+    let start;
+    
+    for(const key of originalMap.keys()){    
+        if(!routesMap.has(key)) {
+            start = key;
+            break;
+        }
+    }
+    
+    let result = [];
+    let iterator = start;
+    while(originalMap.has(iterator)){        
+        result.push(iterator)
+        iterator = originalMap.get(iterator);
+    }
+    result.push(iterator)
+    return result;
+}
+
