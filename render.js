@@ -1,7 +1,11 @@
 const body = document.getElementsByTagName('body')[0];
 const appTitle = document.createElement('h1');
-appTitle.innerText = 'Route Itinerary'
+const subtitle = document.createElement('h3');
+appTitle.innerText = 'Route ✈️ Itinerary'
+subtitle.innerText = 'Click on the code to get your ticket'
+body.prepend(subtitle)
 body.prepend(appTitle)
+
 const app = document.getElementById('app');
 
 
