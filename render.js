@@ -11,7 +11,11 @@ const app = document.getElementById('app');
 
 function getTicket(e){
     const ticket = onewayTickets.find(ticket => ticket[0] === e.target.innerText)
-    alert(`Grap your ticket: ${ticket[0]} ✈️ ${ticket[1]}`)
+    if(ticket) {
+        alert(`Grap your ticket: ${ticket[0]} ✈️ ${ticket[1]}`)
+    } else {
+        alert(`Your trip is over =()`)
+    }
 
 }
 
